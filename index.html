@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StateOS | The Human Operating System</title>
+    <!-- OpnForm SDK -->
+    <script src="https://opnform.com/widgets/opnform-sdk.min.js"></script>
+    <style>
+        :root {
+            --bg-obsidian: #0D0F12;
+            --card-bg: #14171D;
+            --border-slate: #232833;
+            --gold-accent: #F2C94C;
+            --text-muted: #A0A0A0;
+        }
+
+        body {
+            background-color: var(--bg-obsidian);
+            color: #FFFFFF;
+            font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Hero Container */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 20px 40px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: var(--gold-accent);
+            font-size: 3.2rem;
+            letter-spacing: -0.02em;
+            margin: 16px 0;
+        }
+
+        p.hero-sub {
+            color: var(--text-muted);
+            max-width: 600px;
+            font-size: 1.15rem;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .mono {
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            opacity: 0.6;
+            letter-spacing: 0.05em;
+        }
+
+        /* OpnForm Wrapper */
+        .opnform-container {
+            width: 100%;
+            max-width: 520px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-slate);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: border-color 0.3s ease;
+        }
+
+        .opnform-container:hover {
+            border-color: var(--gold-accent);
+        }
+
+        iframe {
+            border: none;
+            width: 100%;
+            background: transparent;
+        }
+
+        /* Investor & Sponsor Section */
+        .investor-section {
+            background: linear-gradient(180deg, var(--card-bg) 0%, rgba(20, 23, 29, 0.4) 100%);
+            border: 1px solid var(--border-slate);
+            border-radius: 16px;
+            padding: 48px 24px;
+            text-align: center;
+            margin: 60px 20px 80px;
+            max-width: 800px;
+            box-sizing: border-box;
+        }
+
+        .investor-section h3 {
+            font-size: 1.8rem;
+            margin: 12px 0;
+            color: #FFFFFF;
+        }
+
+        .investor-section p {
+            color: var(--text-muted);
+            max-width: 580px;
+            margin: 0 auto 28px;
+            line-height: 1.6;
+        }
+
+        .investor-email {
+            color: var(--gold-accent);
+            font-family: 'Courier New', monospace;
+            font-weight: 700;
+        }
+
+        .secondary-cta {
+            background: transparent;
+            color: var(--gold-accent);
+            border: 1px solid var(--gold-accent);
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s ease;
+        }
+
+        .secondary-cta:hover {
+            background: rgba(242, 201, 76, 0.1);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO FOLD WITH OPNFORM EMBED -->
+    <section class="hero">
+        <div class="mono">STATUS: ARCHITECTURE_LOCKED // PENDING_LAUNCH</div>
+        <h1>StateOS</h1>
+        <p class="hero-sub">Optimal internal state is an engineering problem, not a character flaw. Reclaim sovereignty over your focus with the world's first Human Operating System.</p>
+        
+        <!-- EMBEDDED OPNFORM -->
+        <div class="opnform-container">
+            <iframe id="contact-form-ycjs5t" src="https://opnform.com/forms/contact-form-ycjs5t"></iframe>
+        </div>
+    </section>
+
+    <!-- SPONSORSHIP & INVESTOR SECTION -->
+    <div class="investor-section">
+        <div class="mono">PARTNERSHIPS & CAPITAL</div>
+        <h3>Sponsorship & Investor Relations</h3>
+        <p>Interested in participating in our upcoming round, strategic partnerships, or corporate deployment? Contact our leadership team directly at <span class="investor-email">hello@getstateos.com</span>.</p>
+        <a href="mailto:hello@getstateos.com?subject=Investor%20%2F%20Sponsorship%20Inquiry%20-%20StateOS" class="secondary-cta">INQUIRE VIA EMAIL</a>
+    </div>
+
+    <!-- OPNFORM SDK HANDLER SCRIPT -->
+    <script>
+        // OpnForm SDK Listener
+        opnform.on('submit', function(data) {
+            console.log('Form submitted successfully:', data);
+            // Optional: Add conversion analytics tracking here
+        });
+    </script>
+</body>
+</html>
